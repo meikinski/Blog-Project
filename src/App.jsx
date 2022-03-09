@@ -9,7 +9,7 @@ function App() {
 
 useEffect(() => {
 
-  client.getEntries().then(response => console.log(response)
+  client.getEntries({content_type:'recipe'}).then(response => console.log(response)
        
     );
   }, [])
