@@ -1,0 +1,44 @@
+.RecipesOverview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto; 
+    max-width: 650px;
+    
+    
+}
+
+.Recipe {
+    border: 1px solid grey;
+    margin: 15px;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 15px;
+    line-height: 1.6;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 34px;
+    margin-bottom: 1rem;
+    text-align: center;
+    
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+.ingredients li {
+    list-style-position: inside;
+
+}
+
+.prep li {
+    list-style-position: inside;
+}
