@@ -4,10 +4,10 @@
     margin: 0 2rem;
 }
 
-body{
-    padding: 0rem;
-    margin: 0rem;
-    background-color: black;
+body {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
 }
 
 a{
@@ -15,42 +15,31 @@ a{
     color: white
 }
 
-
-.App-header{
-    padding: 0rem;
-    margin: 0rem;
-    background-color: black;
+.App-header {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
 }
 
-.navigation{
-    display: flex;
-    justify-content: center;
-    background: black;
-
-
+.navigation {
+  display: flex;
+  justify-content: center;
+  background: black;
 }
 
-.navLink{
-    padding: 0.5rem;
-    margin: 1rem;
-    color: white;
-    font-size: 1.2rem;;
+.navLink {
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
 }
 
 
-.hero{
-    display: flex;
-    justify-content: center;
-
-
-}
-
-.heroImg{
-    width: 1200px;
-    height: 300px;
-    object-fit: cover;
-
-}
 .partnerWrapper{
     display: flex;
     flex-direction: row;
@@ -69,9 +58,9 @@ padding: 1rem;
 }
 
 .partnerImage{
-    width: 300px;
-    height: 300px;
-
+    width: 100%;
+    height: auto;
+    padding: 0rem;
     object-fit: cover;
 }
 
@@ -85,3 +74,44 @@ padding: 1rem;
 p.partnerText {
     line-height: 1.5rem;
 }
+
+/*************
+Yen-This style
+*************/
+
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 150px;
+}
+
+.authorImg:hover {
+  opacity: 0.8;
+}
+
+.authorImg {
+  width: 300px;
+  height: 300px;
+  object-fit: scale-down;
+}
+
+.authorTitle {
+  padding: 5px 0;
+}
+
+.shortIntro {
+  margin: 0 200px;
+  text-align: justify;
+  text-align-last: none;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
+/*************
+Yen-This style
+*************/
