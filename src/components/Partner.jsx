@@ -23,8 +23,7 @@ useEffect(() => {
     <>
   
       <h2>{item.fields.name}</h2>
-      {/* <img src={item.fields.picture.fields.file.url} alt="test"/> */}
-      {/* <img src={item.fields.picture.fields.file.url} alt="" /> */}
+      <img className="partnerImage" src={item.fields.picture.fields.file.url} alt="test"/>
       <p>{item.fields.description}</p>
       <a href={item.fields.url}>More information</a>
   
