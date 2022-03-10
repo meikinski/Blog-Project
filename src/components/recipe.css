@@ -19,6 +19,15 @@
     border-radius: 15px;
     line-height: 1.6;
     align-items: center;
+    padding: 2rem;
+}
+
+.description {
+    margin: 2rem auto;
+}
+
+.rating {
+    margin: 2rem auto;
 }
 
 .title {
@@ -32,7 +41,27 @@
 img {
     width: 50%;
     height: auto;
+    opacity: 0.8;
 }
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 14px;
+    margin-top: 25px;
+    background: #e0b57f;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: #e69f8a;
+    border-color: none; 
+}
+
+
 
 .ingredients li {
     list-style-position: inside;

@@ -1,0 +1,37 @@
+.blogPost {
+    border: 1px solid #f00;
+    max-width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    list-style-position: inside;
+}
+
+.blogPictureContainer {
+    max-height: 30rem;
+    /*border: 5px solid blue;*/
+    overflow: hidden;
+}
+
+.blogPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+
+}
+
+.authorsPictureContainer {
+    max-height: 20rem;
+    /*border: 5px solid blue;*/
+    overflow: hidden;
+}
+
+.authorsPicture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+}
