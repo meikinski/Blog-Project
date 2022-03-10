@@ -17,21 +17,31 @@ useEffect(() => {
 
   return (
 <>
+    <div className="partnerWrapper">
   {
   partnerData.length &&
     partnerData.map((item) => 
     <>
-  
-      <h2>{item.fields.name}</h2>
-      <img className="partnerImage" src={item.fields.picture.fields.file.url} alt="test"/>
-      <p>{item.fields.description}</p>
-      <a href={item.fields.url}>More information</a>
+      <div className="partnerCard">
+        <h2>{item.fields.name}</h2>
+        <div className="partnerDescription">
+          {/* <div className="partnerImage"> */}
+            <img className="partnerImage" src={item.fields.picture.fields.file.url} alt="test"/>
+          {/* </div> */}
+          <div >
+            <p className="partnerText">{item.fields.description}</p>
+            <a className="partnerText" href={item.fields.url}>More information</a>
+          </div>
+        </div>
+      </div>
+
+
   
     </>
     )
   
   }
-  
+  </div>
 </>
   );
 }
