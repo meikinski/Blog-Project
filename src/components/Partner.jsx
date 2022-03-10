@@ -23,10 +23,10 @@ useEffect(() => {
     partnerData.map((item) => 
     <>
       <div className="partnerCard">
-        <h2 class="text-light">{item.fields.name}</h2>
+        <h2 >{item.fields.name}</h2>
         <img className="partnerImage" src={item.fields.picture.fields.file.url} alt="test"/>
         <div class="" className="partnerDescription"> 
-          <p className="partnerText" class="text-light" >{item.fields.description}</p>
+          <p className="partnerText"  >{item.fields.description}</p>
           <a className="partnerText" href={item.fields.url}>More information</a>
         </div>
       </div>
