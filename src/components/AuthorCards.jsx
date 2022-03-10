@@ -9,9 +9,9 @@ export default function AuthorCards({
   const [showText, setShowText] = useState(false);
   return (
     <div className="authors">
-      <div className="authorImg">
+      <div className="authorImgContainer">
         <a href={socialMedia} className="socialMedia">
-          <img src={picture} alt="Author" />
+          <img className="authorImg"src={picture} alt="Author" />
         </a>
       </div>
       <h3 className="authorTitle">{name}</h3>

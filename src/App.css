@@ -51,7 +51,7 @@ Yen-This style
   opacity: 0.8;
 }
 
-img {
+.authorImg {
   width: 300px;
   height: 300px;
   object-fit: scale-down;
