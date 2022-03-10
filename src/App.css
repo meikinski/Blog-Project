@@ -1,3 +1,7 @@
+/*************
+Yen-This style
+*************/
+
 .root {
   font-size: 16px;
 }
@@ -12,4 +16,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 150px;
 }
+
+.authorImg:hover {
+  opacity: 0.8;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: scale-down;
+}
+
+.authorTitle {
+  padding: 5px 0;
+}
+
+.shortIntro {
+  margin: 0 200px;
+  text-align: justify;
+  text-align-last: none;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+}
+/*************
+Yen-This style
+*************/

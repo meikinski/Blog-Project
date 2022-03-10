@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function AuthorCards({
   name,
@@ -6,14 +6,16 @@ export default function AuthorCards({
   shortIntro,
   socialMedia,
 }) {
+  const [showText, setShowText] = useState(false);
   return (
     <div className="authors">
       <div className="authorImg">
-        <img src={picture} alt="Author" />
+        <a href={socialMedia} className="socialMedia">
+          <img src={picture} alt="Author" />
+        </a>
       </div>
-      <div className="authorTitle">{name}</div>
+      <h3 className="authorTitle">{name}</h3>
       <div className="shortIntro">{shortIntro}</div>
-      <div className="socialMedia">{socialMedia}</div>
     </div>
   );
 }
