@@ -1,0 +1,94 @@
+:root {
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App-header {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+
+.navLink {
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+Vita style
+*************/
+
+.overviewCards {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonCard {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+/*************
+Yen-This style
+*************/
+
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 150px;
+}
+
+.authorImg:hover {
+  opacity: 0.8;
+}
+
+.authorImg {
+  width: 300px;
+  height: 300px;
+  object-fit: scale-down;
+}
+
+.authorTitle {
+  padding: 5px 0;
+}
+
+.shortIntro {
+  margin: 0 200px;
+  text-align: justify;
+  text-align-last: none;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
+/*************
+Yen-This style
+*************/
