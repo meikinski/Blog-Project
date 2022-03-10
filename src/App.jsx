@@ -3,13 +3,13 @@ import React, {useEffect} from 'react';
 import {useContentful} from 'react-contentful'
 import {Routes, Route, NavLink} from 'react-router-dom';
 import {client} from './client.js';
-import Hero from './Hero';
+import Home from './components/Home';
 import Author from './components/Author';
 import Blogpost from './components/Blogpost';
 import Partner from './components/Partner';
 import Recipe from './components/Recipe';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from 'react-bootstrap/Carousel';
+
+
 
 
 
@@ -21,19 +21,27 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img className="logo"/>
-        <nav>
+        <nav className="navigation">
 
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/recipes">Recipes</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
-            <NavLink to="/authors">Authors</NavLink>
-            <NavLink to="/partners">Partners</NavLink>
+            <NavLink className="navLink" to="/">Home</NavLink>
+            <NavLink className="navLink" to="/recipes">Recipes</NavLink>
+            <NavLink className="navLink" to="/blog">Blog</NavLink>
+            <NavLink className="navLink" to="/authors">Authors</NavLink>
+            <NavLink className="navLink" to="/partners">Partners</NavLink>
 
         </nav>
-        <Hero/>
+        
       </header>
       <main>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/recipes" element={<Recipe/>} />
+          <Route path="/blog" element={<Blogpost/>} />
+          <Route path="/authors" element={<Author/>} />
+          <Route path="/partners" element={<Partner/>} />
 
+
+        </Routes>
       </main>
       <footer>
         
