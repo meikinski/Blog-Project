@@ -1,16 +1,44 @@
+:root {
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App-header {
+  padding: 0rem;
+  margin: 0rem;
+  background-color: black;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background: black;
+}
+
+.navLink {
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
 /*************
 Yen-This style
 *************/
-
-.root {
-  font-size: 16px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 .authors {
   display: flex;
@@ -41,9 +69,9 @@ img {
   padding-bottom: 30px;
 }
 
-
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 100%;
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
 }
 /*************
 Yen-This style
