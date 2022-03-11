@@ -59,6 +59,8 @@ Yen-This style
 
 .authorTitle {
   padding: 5px 0;
+  cursor: pointer;
+  
 }
 
 .shortIntro {
@@ -69,10 +71,11 @@ Yen-This style
   padding-bottom: 30px;
 }
 
-.carousel-inner > .item > img,
+/* .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
-}
+} */
+
 /*************
 Yen-This style
 *************/
