@@ -46,16 +46,16 @@ button {
   height: 50px;
   font-size: 14px;
   margin-top: 25px;
-  background: #e0b57f;
-  border: 2px solid black;
-  border-radius: 10px;
+  background-color: rgba(6, 124, 75, 0.37);
+  border: none;
+  border-radius: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: all 0.25s ease;
 }
 
 button:hover {
-  background: #e69f8a;
-  border-color: none;
+  background-color: rgba(6, 124, 75, 0.808);
+  color: white;
 }
 
 .ingredients li {
