@@ -81,13 +81,13 @@ Vita style
 }
 
 .buttonCard {
-  color: black;
+  color: white;
   background-color: rgba(6, 124, 75, 0.808);
   border-color: white;
 }
 
 .buttonCard:hover {
-  color: white;
+  color: black;
   background-color: rgba(6, 124, 75, 0.37);
   border-color: rgba(6, 124, 75, 0.808);
 }
