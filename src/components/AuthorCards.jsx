@@ -5,6 +5,7 @@ export default function AuthorCards({
   picture,
   shortIntro,
   socialMedia,
+  title,
 }) {
   const [showText, setShowText] = useState(false);
 
@@ -18,14 +19,21 @@ export default function AuthorCards({
   return (
     <div className="authors">
       <div className="authorImgContainer">
-        <a href={socialMedia} className="socialMedia">
-          <img className="authorImg" src={picture} alt="Author" />
-        </a>
+        <img className="authorImg" src={picture} alt="Author" />
       </div>
-      <h3 className="authorTitle" onClick={handleClick}>
-        {name}
-      </h3>
+      <h3 className="authorTitle">{title}</h3>
+      <div className="authorBtn-container">
+        <button className="authorBtn" onClick={handleClick}>
+          About {name}
+        </button>
+      </div>
       {showText && <div className="shortIntro">{shortIntro}</div>}
+      <br />
+      {showText && (
+        <a href={socialMedia} className="socialMedia">
+          Follow me on Instagram
+        </a>
+      )}
     </div>
   );
 }

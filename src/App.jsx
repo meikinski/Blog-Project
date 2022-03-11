@@ -16,19 +16,64 @@ function App() {
         <header className="App-header">
           <img className="logo" alt="" />
           <nav className="navigation">
-            <NavLink className="navLink" to="/">
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+              className="navLink"
+              to="/"
+            >
               Home
             </NavLink>
-            <NavLink className="navLink" to="/recipes">
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+              className="navLink"
+              to="/recipes"
+            >
               Recipes
             </NavLink>
-            <NavLink className="navLink" to="/blog">
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+              className="navLink"
+              to="/blog"
+            >
               Blog
             </NavLink>
-            <NavLink className="navLink" to="/authors">
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+              className="navLink"
+              to="/authors"
+            >
               Authors
             </NavLink>
-            <NavLink className="navLink" to="/partners">
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                  fontWeight: isActive ? "bold" : "",
+                };
+              }}
+              className="navLink"
+              to="/partners"
+            >
               Partners
             </NavLink>
           </nav>
