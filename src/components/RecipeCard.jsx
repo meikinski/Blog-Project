@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import './recipe.css'
 
@@ -7,6 +8,7 @@ export default function RecipeCard({
   title,
   description,
   rating,
+  author,
   image,
   ingredients,
   preperation
@@ -24,6 +26,9 @@ export default function RecipeCard({
         <h3>{title}</h3>
         <ReactMarkdown className="description">{description}</ReactMarkdown>
         <ReactMarkdown className="rating">{rating}</ReactMarkdown>
+       <Link to="/authors">
+        <div>{author}</div>
+        </Link>
         <div><img src={image} alt=""/></div>
         <div>
             {showIngredients ? 

@@ -96,6 +96,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="recipes/:author" element={<Author />}></Route>
             <Route path="/recipes" element={<Recipe />} />
             <Route path="/blog" element={<Blogpost />} />
             <Route path="/authors" element={<Author />} />
