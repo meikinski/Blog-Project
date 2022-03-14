@@ -30,9 +30,10 @@ function goBack() {
 
 return(
 <>
-    
+    <div className="header">
+        <h2>RECIPES</h2>
+    </div>
    <div>
-   
        {recipesData.map((recipes) => (
            <RecipeCard
            title={recipes.fields.title}

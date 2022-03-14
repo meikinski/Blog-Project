@@ -154,3 +154,67 @@ Yen-This style
 /*************
 Yen-This style
 *************/
+
+/*
+Meike style
+*************/
+.footer{
+  display: flex;
+  justify-content: space-around;
+ color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color:rgba(0, 0, 0, 0.37);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.footer ul {
+  list-style: none;
+  border: 1px solid grey;
+}
+
+.about {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+
+}
+.icons img {
+  height: 50px;
+  width: auto;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnGoBack {
+  background: grey;
+  margin-left: 5rem;
+
+}
+
+/*************
+Meike style
+  
+*************/

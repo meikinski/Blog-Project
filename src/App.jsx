@@ -8,6 +8,7 @@ import Author from "./components/Author";
 import Blogpost from "./components/Blogpost";
 import Partner from "./components/Partner";
 import Recipe from "./components/Recipe";
+import Footer from "./components/Footer"
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
@@ -154,7 +155,9 @@ function App() {
             <Route path="/partners" element={<Partner />} />
           </Routes>
         </main>
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );
