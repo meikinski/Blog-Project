@@ -1,30 +1,34 @@
-:root{
-    font-family: sans-serif;
-    color: white;
-    margin: 0 2rem;
+:root {
+  font-family: sans-serif;
+  color: black;
+  margin: 0 2rem;
 }
 
 body {
   padding: 0rem;
   margin: 0rem;
-  background-color: black;
 }
 
-a{
-    text-decoration: none;
-    color: white
+a {
+  text-decoration: none;
+  color: rgba(6, 124, 75, 0.808);
+}
+
+a:hover {
+  color: rgba(6, 124, 75, 0.37);
 }
 
 .App-header {
   padding: 0rem;
   margin: 0rem;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .navigation {
   display: flex;
   justify-content: center;
-  background: black;
+  background: rgba(6, 124, 75, 0.37);
+  margin-bottom: 2rem;
 }
 
 .navLink {
@@ -34,45 +38,38 @@ a{
   font-size: 1.2rem;
 }
 
-.hero {
+.partnerWrapper {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-
-.partnerWrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  
-
+.partnerCard {
+  width: 300px;
+  margin: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.562);
+  border-radius: 5px;
+  padding: 1rem;
 }
 
-.partnerCard{
-width: 300px;
-margin: 1rem;
-border: 1px solid white;
-border-radius: 5px;
-padding: 1rem;
+.partnerImage {
+  width: 100%;
+  height: auto;
+  padding: 0rem;
+  object-fit: cover;
 }
 
-.partnerImage{
-    width: 100%;
-    height: auto;
-    padding: 0rem;
-    object-fit: cover;
-}
-
-
-.partnerDescription{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.partnerDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 p.partnerText {
-    line-height: 1.5rem;}
+  line-height: 1.5rem;
+  text-align: justify;
+}
 /*
 Vita style
 *************/
@@ -85,47 +82,75 @@ Vita style
 
 .buttonCard {
   color: white;
-  background-color: black;
-  border-color: black;
+  background-color: rgba(6, 124, 75, 0.808);
+  border-color: white;
+}
+
+.buttonCard:hover {
+  color: black;
+  background-color: rgba(6, 124, 75, 0.37);
+  border-color: rgba(6, 124, 75, 0.808);
 }
 
 /*************
 Yen-This style
 *************/
-
-.authors {
+.authorWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 150px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.authorImg:hover {
-  opacity: 0.8;
+.authors {
+  width: 300px;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .authorImg {
-  width: 300px;
-  height: 300px;
-  object-fit: scale-down;
+  width: 100%;
+  height: auto;
+  padding: 0rem;
+  object-fit: cover;
 }
 
 .authorTitle {
-  padding: 5px 0;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.authorBtn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.authorBtn {
+  background-color: rgba(6, 124, 75, 0.37);
+  border: none;
+  border-radius: 0px;
+  width: 150%;
+}
+
+.authorBtn:hover {
+  background-color: rgba(6, 124, 75, 0.808);
+  color: white;
 }
 
 .shortIntro {
-  margin: 0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: justify;
-  text-align-last: none;
-  padding-top: 10px;
-  padding-bottom: 30px;
 }
 
-.carousel-inner > .item > img,
+/* .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   width: 100%;
-}
+} */
+
 /*************
 Yen-This style
 *************/

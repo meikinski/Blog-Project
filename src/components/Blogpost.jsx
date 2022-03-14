@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import {client} from "../client";
 import ReactMarkdown from 'react-markdown';
+import ShowMoreText from "react-show-more-text";
 import "../Blogpost.css";
 
 function Blogpost() {
 
     const [posts, setPosts] = useState([]);
+    //const [showMore, setShowMore] = useState(false);
     console.log(posts);
+
+    function executeOnClick(isExpanded) {
+        console.log(isExpanded);
+    }
 
     useEffect(() => {
 
@@ -31,15 +37,26 @@ function Blogpost() {
                         <div className="pullQuote">
                             <ReactMarkdown>{items.fields.pullQuote.content[0].content[0].value}</ReactMarkdown>
                         </div>
+                        <ShowMoreText
+                /* Default options */
+                lines={8}
+                more="Show more"
+                less="Show less"
+                className="content-css"
+                anchorClass="my-anchor-css-class"
+                onClick={executeOnClick}
+                expanded={false}
+                width={990}
+                truncatedEndingComponent={"... "}>
                         <div className="blogEntry">
                             <ReactMarkdown>{items.fields.blogEntry}</ReactMarkdown>
                         </div>
+                </ShowMoreText>
                         <div className="authorsPictureContainer"><img className="authorsPicture" src={items.fields.authorsPicture.fields.file.url} alt="authorspicture" />
                         </div>
                         <div className="authorsName">
                             <ReactMarkdown>{items.fields.authorsName.content[0].content[0].value}</ReactMarkdown>
                         </div>
-
                     </div>
                 );
             })}
