@@ -113,9 +113,6 @@ Yen-This style
   height: auto;
   padding: 0rem;
   object-fit: cover;
-  opacity: 1;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
 }
 
 .authorTitle {
