@@ -4,14 +4,13 @@
   margin: 0;
 }
 
-
 body {
   padding: 0rem;
   margin: 0rem;
 }
 
-header{
-  background-color: #B5CEBE;
+header {
+  background-color: #b5cebe;
   /* transition: all 0.25s ease; */
   width: 100%;
   z-index: 5;
@@ -98,21 +97,21 @@ Yen-This style
 .authorWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .authors {
-  width: 500px;
-  margin: 2rem 6rem;
-  padding: 2rem;
+  width: 320px;
+  margin: 2rem 0;
+  padding: 1.5rem;
   border: 1px solid grey;
   border-radius: 5px;
 }
 
-.authorImgContainer{
+.authorImgContainer {
   position: relative;
-  width: 100%
+  width: 100%;
 }
 
 .overlay {
@@ -124,12 +123,12 @@ Yen-This style
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: white;
 }
 
-.authorImgContainer:hover .overlay{
-  opacity: .8;
+.authorImgContainer:hover .overlay {
+  opacity: 0.8;
 }
 
 .text {
@@ -142,7 +141,7 @@ Yen-This style
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: .6rem .7rem;
+  padding: 0.6rem 0.7rem;
   border: 2px solid grey;
   border-radius: 5px;
 }
@@ -176,7 +175,6 @@ Yen-This style
   text-align: center;
 }
 
-
 .shortIntro {
   display: flex;
   flex-direction: column;
@@ -191,17 +189,16 @@ Yen-This style
 /*
 Meike style
 *************/
-.footer{
+.footer {
   display: flex;
   justify-content: space-around;
- color: black;
+  color: white;
   margin-top: auto;
   padding: 2rem;
-  background-color:rgba(255, 255, 224, 0.377);
+  background-color: rgba(0, 0, 0, 0.37);
   bottom: 0;
   left: 0;
   width: 100%;
-
 }
 
 .footer ul {
@@ -210,14 +207,13 @@ Meike style
 }
 
 .about {
-  
   display: flex;
   flex-direction: column;
 }
 
 .footer p {
   font-weight: bold;
-  /* font-size: larger; */
+  font-size: larger;
 }
 
 .social {
@@ -229,7 +225,6 @@ Meike style
 .icons {
   display: flex;
   flex-direction: row;
-
 }
 .icons img {
   height: 50px;
@@ -240,7 +235,6 @@ Meike style
   display: flex;
   flex-direction: column;
 }
-
 
 /*************
 Meike style
