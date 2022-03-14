@@ -31,9 +31,6 @@ export default function RecipeCard({
         </Link>
         <div><img src={image} alt=""/></div>
         <div>
-          <img src={image} alt="" />
-        </div>
-        <div>
           {showIngredients ? (
             <ReactMarkdown className="ingredients">{ingredients}</ReactMarkdown>
           ) : null}
