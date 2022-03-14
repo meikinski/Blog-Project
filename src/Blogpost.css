@@ -1,14 +1,36 @@
-.blogPost {
-    border: 1px solid #f00;
-    max-width: 100%;
+.pictureGalleryContainer {
+    height: 100%;
+    /*border: 5px solid blue;*/
+    overflow: hidden;
+    width: 100%;
+    background-image: url("/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
+    background-size: cover;
     display: inline-block;
+    vertical-align: middle;
+}
+
+.inlineBlock {
+    height: 12rem;
+    /*border: 5px solid red;*/
+    display: inline-block;
+    width: 100%;
+}
+
+.blogPost {
+    /*border: 1px solid #f00;*/
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin: 0 auto;
+    margin: 2em auto;
     list-style-position: inside;
+    border: 1px solid #808080;
+    border-radius: 15px;
+    padding: 1.5rem;
 }
 
 .blogPictureContainer {
-    max-height: 30rem;
+    max-height: 25rem;
     /*border: 5px solid blue;*/
     overflow: hidden;
 }
@@ -22,10 +44,15 @@
 
 }
 
+.blogTitle {
+    margin-top: 1.5rem
+}
+
 .authorsPictureContainer {
-    max-height: 20rem;
+    max-height: 19rem;
     /*border: 5px solid blue;*/
     overflow: hidden;
+    margin: 1.5rem 0;
 }
 
 .authorsPicture {
