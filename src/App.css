@@ -1,12 +1,20 @@
 :root {
   font-family: sans-serif;
   color: black;
-  margin: 0 2rem;
+  margin: 0;
 }
+
 
 body {
   padding: 0rem;
   margin: 0rem;
+}
+
+header{
+  background-color: #B5CEBE;
+  /* transition: all 0.25s ease; */
+  width: 100%;
+  z-index: 5;
 }
 
 a {
@@ -21,14 +29,6 @@ a:hover {
 .App-header {
   padding: 0rem;
   margin: 0rem;
-  /* background-color: black; */
-}
-
-.navigation {
-  display: flex;
-  justify-content: center;
-  background: rgba(6, 124, 75, 0.37);
-  margin-bottom: 2rem;
 }
 
 .navLink {
