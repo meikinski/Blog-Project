@@ -129,3 +129,20 @@ Yen-This style
 /*************
 Yen-This style
 *************/
+
+/*
+Meike style
+*************/
+.footer{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: black;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/*************
+Meike style
+*************/
