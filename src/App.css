@@ -1,7 +1,7 @@
 :root {
   font-family: sans-serif;
   color: black;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 body {
@@ -162,7 +162,7 @@ Meike style
   display: flex;
   justify-content: space-around;
  color: white;
-  margin-top: auto;
+  margin-top: 2rem;
   padding: 2rem;
   background-color:rgba(0, 0, 0, 0.37);
   bottom: 0;
@@ -208,6 +208,11 @@ Meike style
   flex-direction: column;
 }
 
+.btnGoBack {
+  background: grey;
+  margin-left: 5rem;
+
+}
 
 /*************
 Meike style
