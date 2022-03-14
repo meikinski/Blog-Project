@@ -20,12 +20,12 @@ export default function Author() {
 
   return (
     <>
-      <h2>Authors</h2>
-      <div>
+      <div className="authorWrapper">
         {author.map((person) => (
           <AuthorCards
             key={person.sys.id}
             id={person.sys.id}
+            title={person.fields.title}
             name={person.fields.name}
             picture={person.fields.picture.fields.file.url}
             shortIntro={person.fields.shortIntro1}
