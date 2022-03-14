@@ -1,7 +1,7 @@
 :root {
   font-family: sans-serif;
   color: black;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 body {
@@ -103,12 +103,52 @@ Yen-This style
 }
 
 .authors {
-  width: 300px;
-  margin: 1rem;
-  padding: 1rem;
+  width: 500px;
+  margin: 2rem 6rem;
+  padding: 2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.authorImgContainer{
+  position: relative;
+  width: 100%
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.authorImgContainer:hover .overlay{
+  opacity: .8;
+}
+
+.text {
+  color: rgb(6, 124, 75);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: .6rem .7rem;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 .authorImg {
+  display: block;
   width: 100%;
   height: auto;
   padding: 0rem;
@@ -132,12 +172,10 @@ Yen-This style
   border: none;
   border-radius: 0px;
   width: 150%;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.authorBtn:hover {
-  background-color: rgba(6, 124, 75, 0.808);
-  color: white;
-}
 
 .shortIntro {
   display: flex;
@@ -145,11 +183,6 @@ Yen-This style
   justify-content: space-around;
   text-align: justify;
 }
-
-/* .carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 100%;
-} */
 
 /*************
 Yen-This style
