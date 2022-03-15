@@ -3,6 +3,7 @@ import {client} from "../client";
 import ReactMarkdown from 'react-markdown';
 import ShowMoreText from "react-show-more-text";
 import "../Blogpost.css";
+import { useNavigate } from 'react-router-dom';
 
 function Blogpost() {
 
@@ -22,9 +23,17 @@ function Blogpost() {
             );
     }, []);
 
+    let navigate = useNavigate();
+
+    function goBack() {
+    navigate(-1);
+    }
+
     return (
         <>
             <h1>Our latest Blog Posts</h1>
+            <div className="inlineBlock"><div className="pictureGalleryContainer"></div></div>
+            
             {posts.map((items) => {
                 return (
                     <div key={crypto.randomUUID()} className="blogPost">
@@ -39,7 +48,7 @@ function Blogpost() {
                         </div>
                         <ShowMoreText
                 /* Default options */
-                lines={8}
+                lines={6}
                 more="Show more"
                 less="Show less"
                 className="content-css"
@@ -60,6 +69,7 @@ function Blogpost() {
                     </div>
                 );
             })}
+        <button onClick={goBack}>Go back</button>
         </>
 
     );

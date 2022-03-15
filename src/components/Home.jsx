@@ -81,73 +81,69 @@ const Home = () => {
 
       <div className="overviewCards">
         <div className="card">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Img
               variant="top"
               src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Recipies</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                You can find here our awesome recipies.
               </Card.Text>
               <Button className="buttonCard" variant="primary">
-                Go somewhere
+                Go to recipies
               </Button>
             </Card.Body>
           </Card>
         </div>
         <div className="card">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Img
               variant="top"
               src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Blog</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Find here some useful tipps about the healthy eating.
               </Card.Text>
               <Button className="buttonCard" variant="primary">
-                Go somewhere
+                Go to blog
               </Button>
             </Card.Body>
           </Card>
         </div>
         <div className="card">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Img
               variant="top"
               src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Authors</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Meet here our authors that write for you.
               </Card.Text>
               <Button className="buttonCard" variant="primary">
-                Go somewhere
+                Go to authors
               </Button>
             </Card.Body>
           </Card>
         </div>
         <div className="card">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "20rem" }}>
             <Card.Img
               variant="top"
-              src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
+              src="./pictures/partners.png"
             />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Partners</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              Meet our dedicated partners that are with us for years.
               </Card.Text>
               <Button className="buttonCard" variant="primary">
-                Go somewhere
+                Go to partners
               </Button>
             </Card.Body>
           </Card>
