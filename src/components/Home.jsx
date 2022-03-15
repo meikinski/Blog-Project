@@ -1,10 +1,25 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "../App.css";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import Modal from 'react-bootstrap/Modal'
+
 
 const Home = () => {
+  const [show, setShow] = useState(false);
+  
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    const myTimeout = setTimeout(() => {handleShow()}, 5000)
+    return () => clearTimeout(myTimeout)
+  }, [])
+
+
   return (
     <>
       <div className="hero">
@@ -78,7 +93,31 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </div>
+      
+      <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Sign up for our awesome newsletter</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
 
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="success" type="submit" onClick={handleClose}>
+                Sign in
+              </Button>
+            </Modal.Footer>
+          </Modal>
       <div className="overviewCards">
         <div className="card">
           <Card style={{ width: "20rem" }}>
