@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useContentful } from "react-contentful";
 import { Routes, Route, NavLink } from "react-router-dom";
 import { client } from "./client.js";
@@ -21,13 +21,12 @@ function App() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
   return (
     <>
       <div className="App">
         <header className="App-header sticky-top d-flex justify-content-between align-items-center flex-md-row flex-wrap">
          
-            <nav className="navbar d-flex justify-content-start flex-grow-4 my-3 ">
+            <nav className="navbar d-flex justify-content-start flex-grow-4 my-3 mx-3 ">
               <NavLink
                 style={({ isActive }) => {
                   return {
@@ -116,6 +115,7 @@ function App() {
         
         </header>
         <main>
+
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
               <Modal.Title>Login to your account</Modal.Title>
@@ -137,6 +137,7 @@ function App() {
               </Form>
             </Modal.Body>
             <Modal.Footer>
+
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
