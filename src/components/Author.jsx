@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {useNavigate} from 'react-router-dom';
 import { client } from "../client.js";
 import AuthorCards from "./AuthorCards";
 
@@ -18,6 +19,11 @@ export default function Author() {
     getAuthors();
   }, []);
 
+  let navigate = useNavigate();
+  function goBack() {
+    navigate(-1);
+  }
+
   return (
     <>
       <div className="authorWrapper">
@@ -32,6 +38,9 @@ export default function Author() {
             socialMedia={person.fields.socialMedia}
           />
         ))}
+      </div>
+      <div className="d-flex justify-content-center mb-5">
+        <button onClick={goBack}>Go back</button>
       </div>
     </>
   );
