@@ -78,6 +78,8 @@ Vita style
   margin-top: 1rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 15px;
 }
 
 .buttonCard {
@@ -162,7 +164,7 @@ Meike style
   display: flex;
   justify-content: space-around;
  color: white;
-  margin-top: auto;
+  margin-top: 2rem;
   padding: 2rem;
   background-color:rgba(0, 0, 0, 0.37);
   bottom: 0;
@@ -208,6 +210,11 @@ Meike style
   flex-direction: column;
 }
 
+.btnGoBack {
+  background: grey;
+  margin-left: 5rem;
+
+}
 
 /*************
 Meike style
