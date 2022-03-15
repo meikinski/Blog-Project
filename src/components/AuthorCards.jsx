@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function AuthorCards({
   name,
@@ -16,7 +16,7 @@ export default function AuthorCards({
           <img className="authorImg" src={picture} alt="Author" />
         </a>
         <div className="overlay">
-          <a href={socialMedia} target="_blank" className="socialMedia">
+          <a href={socialMedia} target="_blank" rel="noreferrer" className="socialMedia">
             <div class="text">Follow on Instagram</div>
           </a>
         </div>
