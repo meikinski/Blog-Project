@@ -3,6 +3,10 @@ import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "../App.css";
+import recipies from '../sources/pictures/recipies.webp';
+import authors from '../sources/pictures/authors.webp';
+import partners from '../sources/pictures/partners.jpeg';
+import blog from '../sources/pictures/blog.png';
 
 const Home = () => {
   return (
@@ -83,8 +87,9 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
+            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
               variant="top"
-              src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
+              src={recipies}
             />
             <Card.Body>
               <Card.Title>Recipies</Card.Title>
@@ -100,8 +105,9 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
+              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
               variant="top"
-              src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
+              src={blog}
             />
             <Card.Body>
               <Card.Title>Blog</Card.Title>
@@ -117,8 +123,9 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
+              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
               variant="top"
-              src="https://media.istockphoto.com/videos/watermelon-on-green-screen-video-id592229546?s=640x640"
+              src={authors}
             />
             <Card.Body>
               <Card.Title>Authors</Card.Title>
@@ -134,8 +141,10 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
+            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
               variant="top"
-              src="./pictures/partners.png"
+              src={partners}
+              alt="partners"
             />
             <Card.Body>
               <Card.Title>Partners</Card.Title>

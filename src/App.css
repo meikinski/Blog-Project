@@ -74,6 +74,11 @@ p.partnerText {
 Vita style
 *************/
 
+.card {
+  height: rem;
+  width: 20rem;
+}
+
 .overviewCards {
   margin-top: 1rem;
   display: flex;

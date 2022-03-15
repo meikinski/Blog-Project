@@ -3,10 +3,12 @@
     /*border: 5px solid blue;*/
     overflow: hidden;
     width: 100%;
-    background-image: url("/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
+    background-image: url("./sources/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
     background-size: cover;
     display: inline-block;
     vertical-align: middle;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .inlineBlock {

@@ -31,7 +31,7 @@ function goBack() {
 return(
 <>
     
-   <div>
+   <div className="d-flex flex-wrap justify-content-around">
    
        {recipesData.map((recipes) => (
            <RecipeCard
