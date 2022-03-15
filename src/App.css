@@ -4,17 +4,9 @@
   margin: 0;
 }
 
-
 body {
   padding: 0rem;
   margin: 0rem;
-}
-
-header{
-  background-color: #B5CEBE;
-  /* transition: all 0.25s ease; */
-  width: 100%;
-  z-index: 5;
 }
 
 a {
@@ -29,6 +21,14 @@ a:hover {
 .App-header {
   padding: 0rem;
   margin: 0rem;
+  /* background-color: black; */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background: rgba(6, 124, 75, 0.37);
+  margin-bottom: 2rem;
 }
 
 .navLink {
@@ -208,11 +208,52 @@ Meike style
   flex-direction: column;
 }
 
-.btnGoBack {
-  background: grey;
-  margin-left: 5rem;
+.header-videoplayer{
+background-image: url("https://img.freepik.com/free-photo/diverse-people-joining-cooking-class_53876-71824.jpg?w=1800");
+background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    margin-bottom: 55px;
+    display: flex;
+    opacity: 0.9;
+}
+
+.header-videoplayer h2{
+text-align: center;
+    margin: auto;
+    color: white;
+    background-color: black;
+    font-size: 68px;
+    letter-spacing: 0.35rem;
+    padding: 10px;
+}
+   
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+  
+  
 
 }
+
+.intro {
+  font-size: 18px;
+  text-align: center;
+}
+
+.video {
+  margin: 50px;
+  
+  
+}
+
+
 
 /*************
 Meike style

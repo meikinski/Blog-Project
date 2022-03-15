@@ -8,6 +8,7 @@ import RecipeCard from './RecipeCard.jsx';
 
 
 
+
 export default function Recipe() {
 
 const [recipesData, setRecipesData] = useState([]);
@@ -32,6 +33,7 @@ return(
 <>
     <div className="header">
         <h2>RECIPES</h2>
+        
     </div>
    <div>
        {recipesData.map((recipes) => (
@@ -47,7 +49,7 @@ return(
            />
            ))}
    </div>
-        <button onClick={goBack}>Go back</button>
+        <button className="btnGoBack" onClick={goBack}>Go back</button>
  </>
        );
    
