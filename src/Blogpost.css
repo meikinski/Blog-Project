@@ -1,14 +1,56 @@
-.blogPost {
-    border: 1px solid #f00;
-    max-width: 100%;
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-    list-style-position: inside;
+.headerBlog{
+    background-image: url("/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    margin-bottom: 55px;
+    display: flex;
+    opacity: 0.9;
 }
 
+.headerBlog h2 {
+    text-align: center;
+    margin: auto;
+    color: white;
+    background-color: black;
+    font-size: 68px;
+    letter-spacing: 0.35rem;
+    padding: 10px;
+    text-transform: uppercase}
+
+.pictureGalleryContainer {
+    height: 100%;
+    /*border: 5px solid blue;*/
+    overflow: hidden;
+    width: 100%;
+    background-image: url("/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inlineBlock {
+    height: 12rem;
+    /*border: 5px solid red;*/
+    display: inline-block;
+    width: 100%;
+}
+
+.blogPost {
+    /*border: 1px solid #f00;*/
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem 4rem;
+    list-style-position: inside;
+    background-color: white;
+    padding: 1.5rem;
+}
+
+
 .blogPictureContainer {
-    max-height: 30rem;
+    max-height: 25rem;
     /*border: 5px solid blue;*/
     overflow: hidden;
 }
@@ -22,10 +64,15 @@
 
 }
 
+.blogTitle {
+    margin-top: 1.5rem
+}
+
 .authorsPictureContainer {
-    max-height: 20rem;
+    max-height: 19rem;
     /*border: 5px solid blue;*/
     overflow: hidden;
+    margin: 1.5rem 0;
 }
 
 .authorsPicture {

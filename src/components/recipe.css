@@ -5,7 +5,7 @@
     height: 450px;
     margin-bottom: 55px;
     display: flex;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 
@@ -24,18 +24,17 @@
   display: flex;
 flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0 auto;
   max-width: 650px;
 }
 
 .Recipe {
-  border: 1px solid grey;
+  background-color: white;
   margin: 15px;
   justify-content: center;
   text-align: center;
   font-size: 14px;
-  border-radius: 15px;
   line-height: 1.6;
   align-items: center;
   padding: 2rem;
@@ -92,5 +91,4 @@ button:hover {
 .btnGoBack {
     background: grey;
     margin-left: 5rem;
-  
   }
