@@ -55,7 +55,7 @@ flex-direction: row;
   text-align: center;
 }
 
-img {
+.cardImage {
   width: 50%;
   height: auto;
   margin-top:25px;

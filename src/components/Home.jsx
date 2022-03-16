@@ -20,6 +20,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   
   const handleClose = () => setShow(false);
+
+  
   const handleShow = () => setShow(true);
 
   useEffect(() => {
@@ -117,7 +119,7 @@ const Home = () => {
               </Form>
             </Modal.Body>
             <Modal.Footer>
-
+      
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
@@ -130,7 +132,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={recipies}
             />
@@ -160,7 +163,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+              style={{ width: "19.8rem", height: "19.8rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={blog}
             />
@@ -189,7 +193,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+              style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={authors}
             />
@@ -218,7 +223,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={partners}
               alt="partners"

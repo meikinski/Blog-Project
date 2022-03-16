@@ -32,7 +32,7 @@ export default function RecipeCard({
        <Link to="/authors">
         <div>{author}</div>
         </Link>
-        <div><img src={image} alt=""/></div>
+        <div><img className="cardImage" src={image} alt=""/></div>
         <div>
           {showIngredients ? (
             <ReactMarkdown className="ingredients">{ingredients}</ReactMarkdown>
