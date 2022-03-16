@@ -7,6 +7,11 @@ import recipies from '../sources/pictures/recipies.webp';
 import authors from '../sources/pictures/authors.webp';
 import partners from '../sources/pictures/partners.jpeg';
 import blog from '../sources/pictures/blog.png';
+import { Routes, Route, NavLink, Link } from "react-router-dom";
+import Author from "./Author";
+import Blogpost from "./Blogpost";
+import Partner from "./Partner";
+import Recipe from "./Recipe";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Modal from 'react-bootstrap/Modal'
@@ -134,9 +139,21 @@ const Home = () => {
               <Card.Text>
                 You can find here our awesome recipies.
               </Card.Text>
-              <Button className="buttonCard" variant="primary">
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                    fontWeight: isActive ? "bold" : "",
+                  };
+                }}
+                className="navLink"
+                to="/recipes"
+              >
+                <Button className="buttonCard" variant="primary">
                 Go to recipies
-              </Button>
+                </Button>
+              </NavLink>
+             
             </Card.Body>
           </Card>
         </div>
@@ -152,9 +169,20 @@ const Home = () => {
               <Card.Text>
                 Find here some useful tipps about the healthy eating.
               </Card.Text>
-              <Button className="buttonCard" variant="primary">
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                    fontWeight: isActive ? "bold" : "",
+                  };
+                }}
+                className="navLink"
+                to="/blog"
+              >
+                <Button className="buttonCard" variant="primary">
                 Go to blog
               </Button>
+              </NavLink>
             </Card.Body>
           </Card>
         </div>
@@ -170,9 +198,20 @@ const Home = () => {
               <Card.Text>
                 Meet here our authors that write for you.
               </Card.Text>
-              <Button className="buttonCard" variant="primary">
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                    fontWeight: isActive ? "bold" : "",
+                  };
+                }}
+                className="navLink"
+                to="/authors"
+              >
+                <Button className="buttonCard" variant="primary">
                 Go to authors
               </Button>
+              </NavLink>
             </Card.Body>
           </Card>
         </div>
@@ -189,13 +228,32 @@ const Home = () => {
               <Card.Text>
               Meet our dedicated partners that are with us for years.
               </Card.Text>
-              <Button className="buttonCard" variant="primary">
-                Go to partners
+                   <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                    fontWeight: isActive ? "bold" : "",
+                  };
+                }}
+                className="navLink"
+                to="/partners"
+              >
+                <Button className="buttonCard" variant="primary">
+              Go to partners
               </Button>
+              </NavLink> 
             </Card.Body>
           </Card>
         </div>
       </div>
+      <Routes>
+            <Route path="/" />
+            <Route path="recipes/:author" element={<Author />}></Route>
+            <Route path="/recipe" element={<Recipe />} />
+            <Route path="/blog" element={<Blogpost />} />
+            <Route path="/authors" element={<Author />} />
+            <Route path="/partners" element={<Partner />} />
+          </Routes>
     </>
   );
 };
