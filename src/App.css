@@ -47,8 +47,8 @@ a:hover {
 }
 
 .partnerCard {
-  width: 300px;
-  margin: 2rem 0;
+  width: 500px;
+  margin: 2rem 0.25rem;
   padding: 1rem;
   background-color: white;
 }
