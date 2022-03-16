@@ -13,6 +13,7 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Modal from 'react-bootstrap/Modal'
+import Videoplayer from "./components/Videoplayer";
 
 
 function App() {
@@ -87,6 +88,18 @@ function App() {
               >
                 Partners
               </NavLink>
+              <NavLink
+                style={({ isActive }) => {
+                  return {
+                    color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
+                    fontWeight: isActive ? "bold" : "",
+                  };
+                }}
+                className="navLink"
+                to="/cookingschool"
+              >
+                Cooking Class
+              </NavLink>
             </nav>
             <Form className="d-flex flex-grow-2 flex-wrap">
                 <div className="d-flex flex-row align-self-center">
@@ -146,6 +159,7 @@ function App() {
               </Button>
             </Modal.Footer>
           </Modal>
+          
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -154,7 +168,9 @@ function App() {
             <Route path="/blog" element={<Blogpost />} />
             <Route path="/authors" element={<Author />} />
             <Route path="/partners" element={<Partner />} />
+            <Route path="/cookingschool" element={<Videoplayer />} />
           </Routes>
+          
         </main>
         <footer>
           <Footer />
