@@ -55,6 +55,10 @@ flex-direction: row;
   text-align: center;
 }
 
+.recipeAuthor {
+  margin-top: 55px;
+}
+
 img {
   width: 50%;
   height: auto;
