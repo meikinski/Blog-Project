@@ -16,7 +16,26 @@
     font-size: 68px;
     letter-spacing: 0.35rem;
     padding: 10px;
-    text-transform: uppercase
+    text-transform: uppercase}
+
+.pictureGalleryContainer {
+    height: 100%;
+    /*border: 5px solid blue;*/
+    overflow: hidden;
+    width: 100%;
+    background-image: url("./sources/pictures/lebensmittelunvertraeglichkeit-allergie-title.jpeg");
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inlineBlock {
+    height: 12rem;
+    /*border: 5px solid red;*/
+    display: inline-block;
+    width: 100%;
 }
 
 .blogPost {
@@ -30,6 +49,7 @@
     background-color: white;
     padding: 1.5rem;
 }
+
 
 .blogPictureContainer {
     max-height: 25rem;
