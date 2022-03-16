@@ -28,27 +28,29 @@ function goBack() {
   navigate(-1);
 }
 
-return(
-<>
-    
-   <div className="d-flex flex-wrap justify-content-around">
-   
-       {recipesData.map((recipes) => (
-           <RecipeCard
-           title={recipes.fields.title}
-           description={recipes.fields.description}
-            rating={recipes.fields.rating}
-            author={recipes.fields.author}
-            image={recipes.fields.picture.fields.file.url}
-            ingredients={recipes.fields.ingredients}
-            preperation=
-            {recipes.fields.prep}
-           />
-           ))}
-   </div>
-        <button onClick={goBack}>Go back</button>
- </>
-       );
+return (
+  <>
+    <div className="header">
+      <h2>RECIPES</h2>
+    </div>
+    <div className="d-flex flex-wrap justify-content-around">
+      {recipesData.map((recipes) => (
+        <RecipeCard
+          title={recipes.fields.title}
+          description={recipes.fields.description}
+          rating={recipes.fields.rating}
+          author={recipes.fields.author}
+          image={recipes.fields.picture.fields.file.url}
+          ingredients={recipes.fields.ingredients}
+          preperation={recipes.fields.prep}
+        />
+      ))}
+    </div>
+     <div className="d-flex justify-content-center mb-5">
+    <button onClick={goBack}>Go back</button>
+    </div>
+  </>
+);
    
 
 } 
