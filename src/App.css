@@ -1,12 +1,20 @@
 :root {
   font-family: sans-serif;
   color: black;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 body {
   padding: 0rem;
   margin: 0rem;
+  background-color: rgba(211, 211, 211, 0.404);
+}
+
+header {
+  background-color: #b5cebe;
+  /* transition: all 0.25s ease; */
+  width: 100%;
+  z-index: 5;
 }
 
 a {
@@ -41,16 +49,16 @@ a:hover {
 .partnerWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  
 }
 
 .partnerCard {
   width: 300px;
-  margin: 1rem;
-  border: 1px solid rgba(128, 128, 128, 0.562);
-  border-radius: 5px;
+  margin: 2rem 0;
   padding: 1rem;
+  background-color: white;
 }
 
 .partnerImage {
@@ -105,17 +113,57 @@ Yen-This style
 .authorWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .authors {
-  width: 300px;
-  margin: 1rem;
-  padding: 1rem;
+  /* width: 320px; */
+  width: 500px;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.authorImgContainer {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: white;
+}
+
+.authorImgContainer:hover .overlay {
+  opacity: 0.8;
+}
+
+.text {
+  color: rgb(6, 124, 75);
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0.6rem 0.7rem;
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 .authorImg {
+  display: block;
   width: 100%;
   height: auto;
   padding: 0rem;
@@ -139,11 +187,8 @@ Yen-This style
   border: none;
   border-radius: 0px;
   width: 150%;
-}
-
-.authorBtn:hover {
-  background-color: rgba(6, 124, 75, 0.808);
-  color: white;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .shortIntro {
@@ -153,11 +198,122 @@ Yen-This style
   text-align: justify;
 }
 
-/* .carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 100%;
-} */
-
 /*************
 Yen-This style
+*************/
+
+/*
+Meike style
+*************/
+.footer {
+  display: flex;
+  justify-content: space-around;
+ color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.37);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer ul {
+  list-style: none;
+  border: 1px solid grey;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+}
+.icons img {
+  height: 50px;
+  width: auto;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-videoplayer{
+background-image: url("https://img.freepik.com/free-photo/diverse-people-joining-cooking-class_53876-71824.jpg?w=1800");
+background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    margin-bottom: 55px;
+    display: flex;
+    opacity: 0.9;
+}
+
+.header-videoplayer h2{
+text-align: center;
+    margin: auto;
+    color: white;
+    background-color: black;
+    font-size: 68px;
+    letter-spacing: 0.35rem;
+    padding: 10px;
+}
+   
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+  
+  
+
+}
+
+.intro {
+  font-size: 18px;
+  text-align: center;
+}
+
+.video {
+  margin: 50px;
+  background-color: white;
+  padding: 25px;
+  
+}
+
+.video-title {
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 50px;
+  background-color: aqua;
+  height: 65px;
+  padding-top: 20px;
+  background-color: rgba(6, 124, 75, 0.37);
+ 
+}
+
+
+
+
+
+/*************
+Meike style
+  
 *************/

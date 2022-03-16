@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import './recipe.css'
 
 
+
+
 export default function RecipeCard({
   title,
   description,
@@ -21,6 +23,7 @@ export default function RecipeCard({
     !showIngredients ? setShowIngredients(true) : setShowIngredients(false);
 
   return (
+    <>
     <div className="RecipesOverview">
       <div className="Recipe">
         <h3>{title}</h3>
@@ -48,5 +51,6 @@ export default function RecipeCard({
         </div>
       </div>
     </div>
+    </>
   );
 }
