@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import './recipe.css'
-
-
-
+import Comment from './Comment'
 
 export default function RecipeCard({
   title,
@@ -49,6 +47,7 @@ export default function RecipeCard({
             {!showPrep ? "Show Preperation" : "Hide"}
           </button>
         </div>
+        <Comment />
       </div>
     </div>
     </>
