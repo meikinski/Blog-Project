@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import './recipe.css'
+import Comment from './Comment'
 import MediaButton from "./MediaButton";
-
-
 
 
 export default function RecipeCard({
@@ -31,7 +30,7 @@ export default function RecipeCard({
         <ReactMarkdown className="description">{description}</ReactMarkdown>
         <ReactMarkdown className="rating">{rating}</ReactMarkdown>
         
-       <Link to="/authors">
+        <Link to="/authors">
         <div >{author}</div>
         </Link>
         <div className="recipeImg"><img src={image} alt=""/></div>
@@ -52,6 +51,7 @@ export default function RecipeCard({
             {!showPrep ? "Show Preperation" : "Hide"}
           </button>
         </div>
+        <Comment />
       </div>
     </div>
     </>

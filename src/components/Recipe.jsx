@@ -47,13 +47,12 @@ return (
         />
       ))}
     </div>
-     <div className="d-flex justify-content-center mb-5">
+      <div className="d-flex justify-content-center mb-5">
     <button onClick={goBack}>Go back</button>
     </div>
   </>
 );
 
-   
 
 } 
 
