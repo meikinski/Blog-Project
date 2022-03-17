@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactPlayer from "react-player"
 import Comment from "./Comment"
+import MediaButton from './MediaButton'
 
 
 
@@ -25,6 +26,7 @@ export default function Videoplayer() {
         url="https://www.youtube.com/watch?v=xBndXDH7gp8"
         controls="true"
       />
+      <MediaButton />
       </div>
       
       <div className='video'>
@@ -33,6 +35,7 @@ export default function Videoplayer() {
         url="https://www.youtube.com/watch?v=9BP2-3uu9qw"
         controls="true"
       />
+      <MediaButton />
       </div>
       <div className='video'>
       <div className='video-title'><h5>A food prep guide for beginners</h5></div>
@@ -40,6 +43,7 @@ export default function Videoplayer() {
         url="https://www.youtube.com/watch?v=ghsw19qAG1g"
         controls="true"
       />
+      <MediaButton />
       </div>
       <div className='video'>
       <div className='video-title'><h5>Let's make some homemade snacks</h5></div>
@@ -48,6 +52,7 @@ export default function Videoplayer() {
         controls="true"
         
       />
+      <MediaButton />
       </div>
       <div className='video'>
       <div className='video-title'><h5>My first Onepot EVER</h5></div>
@@ -55,6 +60,7 @@ export default function Videoplayer() {
         url="https://www.youtube.com/watch?v=j7Og4vp6U24"
         controls="true"
       />
+      <MediaButton />
       </div>
       </div>
         
