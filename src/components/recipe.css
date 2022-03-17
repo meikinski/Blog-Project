@@ -59,12 +59,10 @@ flex-direction: row;
   margin-top: 55px;
 }
 
-img {
+.recipeImg img {
   width: 50%;
   height: auto;
   margin-top:25px;
-
-
 }
 
 button {

@@ -274,7 +274,7 @@ text-align: center;
 
 .video-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -336,6 +336,7 @@ text-align: center;
 
 .like-button img {
   width: 25px;
+  margin-top:25px;
 }
 
 .like-button:hover {

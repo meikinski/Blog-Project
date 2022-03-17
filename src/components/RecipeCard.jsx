@@ -34,7 +34,7 @@ export default function RecipeCard({
        <Link to="/authors">
         <div >{author}</div>
         </Link>
-        <div><img src={image} alt=""/></div>
+        <div className="recipeImg"><img src={image} alt=""/></div>
         <MediaButton />
         <div>
           {showIngredients ? (

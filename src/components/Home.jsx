@@ -122,7 +122,7 @@ const Home = () => {
                 Close
               </Button>
               <Button variant="success" type="submit" onClick={handleClose}>
-                Sign in
+                Sign up
               </Button>
             </Modal.Footer>
           </Modal>
