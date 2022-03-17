@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import './recipe.css'
 import MediaButton from "./MediaButton";
-import TagList from './Recipe.jsx'
-
-
 
 
 export default function RecipeCard({
@@ -32,14 +29,12 @@ export default function RecipeCard({
         <h3>{title}</h3>
         <ReactMarkdown className="description">{description}</ReactMarkdown>
         
-        
-        
        <Link to="/authors">
         <div >{author}</div>
         </Link>
         <div><img src={image} alt=""/></div>
         <MediaButton />
-        
+      
         <div>
           {showIngredients ? (
             <ReactMarkdown className="ingredients">{ingredients}</ReactMarkdown>
