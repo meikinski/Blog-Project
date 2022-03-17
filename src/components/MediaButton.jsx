@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import LikeButton from './LikeButton';
 import {
     FacebookShareButton,
@@ -43,8 +42,6 @@ return(
         </div>
         <div className='socialMediaNetwork'>
             <LikeButton />
-            
-            
         </div>
         
     </div>

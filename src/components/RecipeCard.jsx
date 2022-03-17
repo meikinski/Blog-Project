@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown';
 import './recipe.css'
 import MediaButton from "./MediaButton";
+import TagList from './Recipe.jsx'
 
 
 
@@ -11,6 +12,7 @@ export default function RecipeCard({
   title,
   description,
   rating,
+  tags,
   author,
   image,
   ingredients,
@@ -29,13 +31,15 @@ export default function RecipeCard({
       <div className="Recipe">
         <h3>{title}</h3>
         <ReactMarkdown className="description">{description}</ReactMarkdown>
-        <ReactMarkdown className="rating">{rating}</ReactMarkdown>
+        
+        
         
        <Link to="/authors">
         <div >{author}</div>
         </Link>
         <div><img src={image} alt=""/></div>
         <MediaButton />
+        
         <div>
           {showIngredients ? (
             <ReactMarkdown className="ingredients">{ingredients}</ReactMarkdown>
@@ -51,6 +55,7 @@ export default function RecipeCard({
           <button className="btnShow" onClick={handleShowPrep}>
             {!showPrep ? "Show Preperation" : "Hide"}
           </button>
+         
         </div>
       </div>
     </div>

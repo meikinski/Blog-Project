@@ -8,7 +8,6 @@ import authors from '../sources/pictures/authors.webp';
 import partners from '../sources/pictures/partners.jpeg';
 import blog from '../sources/pictures/blog.png';
 import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Modal from 'react-bootstrap/Modal'
 
 const Home = () => {
