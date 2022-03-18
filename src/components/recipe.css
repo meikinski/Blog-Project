@@ -92,3 +92,12 @@ button:hover {
     background: grey;
     margin-left: 5rem;
   }
+
+  .tagButtons {
+  display: flex;
+  justify-content: center;
+  }
+
+  .tagButton {
+    margin: 0.5rem;
+  }
