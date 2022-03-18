@@ -52,6 +52,13 @@ const handleMeat = () => {
         );
     }
 
+    const handleBackToAll = () => {
+      client.getEntries({content_type:'recipe'})
+    .then(response => setRecipesData(response.items)
+    .catch(error => console.log('Error: ', error))
+    );
+    }
+
 return (
   <>
     <div className="header">
@@ -74,7 +81,10 @@ return (
         />
       ))}
     </div>
-     <div className="d-flex justify-content-center mb-5">
+    <div className="tagButtons">
+    <button onClick={handleBackToAll}>all recipes</button>
+    </div>
+    <div className="d-flex justify-content-center mb-5">
     <button onClick={goBack}>Go back</button>
     </div>
   </>
