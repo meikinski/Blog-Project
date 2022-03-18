@@ -38,13 +38,27 @@ console.log(veggieRecipes)
 setRecipesData(veggieRecipes);*/
 }
 
+const handleMeat = () => {
+  client.getEntries({content_type:'recipe'})
+      .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Meat")))
+      .catch(error => console.log('Error: ', error))
+      );
+  }
+
+  const handlePasta = () => {
+    client.getEntries({content_type:'recipe'})
+        .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Pasta")))
+        .catch(error => console.log('Error: ', error))
+        );
+    }
+
 return (
   <>
     <div className="header">
       <h2>RECIPES</h2>
     </div>
     <div className="tagButtons">
- <button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton">quick lunch</button> <button className="tagButton">super healthy</button>
+ <button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton" onClick={handleMeat}>meat</button> <button className="tagButton" onClick={handlePasta}>pasta</button>
     </div>
     <div className="d-flex flex-wrap justify-content-around">
       {recipesData && recipesData.map((recipes) => (
