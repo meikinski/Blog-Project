@@ -7,13 +7,12 @@ import recipies from '../sources/pictures/recipies.webp';
 import authors from '../sources/pictures/authors.webp';
 import partners from '../sources/pictures/partners.jpeg';
 import blog from '../sources/pictures/blog.png';
-import { Routes, Route, NavLink, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Author from "./Author";
 import Blogpost from "./Blogpost";
 import Partner from "./Partner";
 import Recipe from "./Recipe";
 import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
 import Modal from 'react-bootstrap/Modal'
 
 const Home = () => {

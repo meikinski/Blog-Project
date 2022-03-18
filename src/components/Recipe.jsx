@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {useContentful} from 'react-contentful'
 import { useNavigate } from 'react-router-dom'
 import {client} from '../client.js';
 import './recipe.css'
-import ReactMarkdown from 'react-markdown';
 import RecipeCard from './RecipeCard.jsx';
 
 export default function Recipe() {
@@ -19,7 +17,8 @@ useEffect(() => {
     );
      },[]);
 
-console.log(recipesData);
+     console.log(recipesData);
+
 
 let navigate =useNavigate();
 function goBack() {
@@ -51,6 +50,7 @@ return (
         <RecipeCard
           title={recipes.fields.title}
           description={recipes.fields.description}
+          tags={recipes.fields.description}
           rating={recipes.fields.rating}
           author={recipes.fields.author}
           image={recipes.fields.picture.fields.file.url}
