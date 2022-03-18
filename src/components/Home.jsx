@@ -19,6 +19,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   
   const handleClose = () => setShow(false);
+
+  
   const handleShow = () => setShow(true);
 
   useEffect(() => {
@@ -44,7 +46,7 @@ const Home = () => {
               alt="First slide"
             />
             <Carousel.Caption>
-              <h2>Blog Name</h2>
+              <h2 className="blogName">Head Over Meals</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -61,7 +63,7 @@ const Home = () => {
             />
 
             <Carousel.Caption>
-              <h2>Blog Name</h2>
+              <h2 className="blogName">Head Over Meals</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -78,7 +80,7 @@ const Home = () => {
             />
 
             <Carousel.Caption>
-              <h2>Blog Name</h2>
+              <h2 className="blogName">Head Over Meals</h2>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -95,7 +97,7 @@ const Home = () => {
             />
 
             <Carousel.Caption>
-              <h2>Blog Name</h2>
+              <h2 className="blogName">Head Over Meals</h2>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -116,7 +118,7 @@ const Home = () => {
               </Form>
             </Modal.Body>
             <Modal.Footer>
-
+      
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
@@ -129,15 +131,14 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={recipies}
             />
             <Card.Body>
               <Card.Title>Recipies</Card.Title>
-              <Card.Text>
-                You can find here our awesome recipies.
-              </Card.Text>
+              <Card.Text>You can find here our awesome recipies.</Card.Text>
               <NavLink
                 style={({ isActive }) => {
                   return {
@@ -149,17 +150,17 @@ const Home = () => {
                 to="/recipes"
               >
                 <Button className="buttonCard" variant="primary">
-                Go to recipies
+                  Go to recipies
                 </Button>
               </NavLink>
-             
             </Card.Body>
           </Card>
         </div>
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+              style={{ width: "19.8rem", height: "19.8rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={blog}
             />
@@ -179,8 +180,8 @@ const Home = () => {
                 to="/blog"
               >
                 <Button className="buttonCard" variant="primary">
-                Go to blog
-              </Button>
+                  Go to blog
+                </Button>
               </NavLink>
             </Card.Body>
           </Card>
@@ -188,15 +189,14 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+              style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={authors}
             />
             <Card.Body>
               <Card.Title>Authors</Card.Title>
-              <Card.Text>
-                Meet here our authors that write for you.
-              </Card.Text>
+              <Card.Text>Meet here our authors that write for you.</Card.Text>
               <NavLink
                 style={({ isActive }) => {
                   return {
@@ -208,8 +208,8 @@ const Home = () => {
                 to="/authors"
               >
                 <Button className="buttonCard" variant="primary">
-                Go to authors
-              </Button>
+                  Go to authors
+                </Button>
               </NavLink>
             </Card.Body>
           </Card>
@@ -217,7 +217,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-            style={{ width: "19rem", height: "19rem", objectFit: "cover", overflow: "hidden"}}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={partners}
               alt="partners"
@@ -225,9 +226,9 @@ const Home = () => {
             <Card.Body>
               <Card.Title>Partners</Card.Title>
               <Card.Text>
-              Meet our dedicated partners that are with us for years.
+                Meet our dedicated partners that are with us for years.
               </Card.Text>
-                   <NavLink
+              <NavLink
                 style={({ isActive }) => {
                   return {
                     color: isActive ? "rgba(6, 124, 75, 0.808)" : "",
@@ -238,21 +239,21 @@ const Home = () => {
                 to="/partners"
               >
                 <Button className="buttonCard" variant="primary">
-              Go to partners
-              </Button>
-              </NavLink> 
+                  Go to partners
+                </Button>
+              </NavLink>
             </Card.Body>
           </Card>
         </div>
       </div>
       <Routes>
-            <Route path="/" />
-            <Route path="recipes/:author" element={<Author />}></Route>
-            <Route path="/recipe" element={<Recipe />} />
-            <Route path="/blog" element={<Blogpost />} />
-            <Route path="/authors" element={<Author />} />
-            <Route path="/partners" element={<Partner />} />
-          </Routes>
+        <Route path="/" />
+        <Route path="recipes/:author" element={<Author />}></Route>
+        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/blog" element={<Blogpost />} />
+        <Route path="/authors" element={<Author />} />
+        <Route path="/partners" element={<Partner />} />
+      </Routes>
     </>
   );
 };

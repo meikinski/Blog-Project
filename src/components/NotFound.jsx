@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NotFound() {
+  let navigate = useNavigate();
+  function goBack() {
+    navigate(-1);
+  }
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -14,9 +19,7 @@ export default function NotFound() {
         Sorry, the page you are looking for does not exist or another error
         occured.
       </h5>
-      <h5>
-        Go back to <a href="/">Home</a>
-      </h5>
+      <button onClick={goBack}>Go back</button>
     </div>
   );
 }

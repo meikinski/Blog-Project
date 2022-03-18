@@ -55,8 +55,8 @@ a:hover {
 }
 
 .partnerCard {
-  width: 300px;
-  margin: 2rem 0;
+  width: 500px;
+  margin: 2rem 0.25rem;
   padding: 1rem;
   background-color: white;
 }
@@ -197,6 +197,16 @@ Yen-This style
   text-align: justify;
 }
 
+.blogName {
+  color: rgba(0, 0, 0, 0.747);
+  font-weight: bold;
+  font-size: 4rem;
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 1rem 0;
+  letter-spacing: .5rem;
+  font-family: Satisfy, sans-serif;
+}
+
 /*************
 Yen-This style
 *************/
@@ -274,7 +284,7 @@ text-align: center;
 
 .video-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -336,6 +346,7 @@ text-align: center;
 
 .like-button img {
   width: 25px;
+  margin-top:25px;
 }
 
 .like-button:hover {
