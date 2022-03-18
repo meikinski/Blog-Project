@@ -20,6 +20,8 @@ const Home = () => {
   const [show, setShow] = useState(false);
   
   const handleClose = () => setShow(false);
+
+  
   const handleShow = () => setShow(true);
 
   useEffect(() => {
@@ -101,40 +103,37 @@ const Home = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-
+      
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sign up for our awesome newsletter</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="success" type="submit" onClick={handleClose}>
-            Sign up
-          </Button>
-        </Modal.Footer>
-      </Modal>
+            <Modal.Header closeButton>
+              <Modal.Title>Sign up for our awesome newsletter</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                  </Form.Text>
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+      
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="success" type="submit" onClick={handleClose}>
+                Sign in
+              </Button>
+            </Modal.Footer>
+          </Modal>
       <div className="overviewCards">
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{
-                width: "19rem",
-                height: "19rem",
-                objectFit: "cover",
-                overflow: "hidden",
-              }}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={recipies}
             />
@@ -161,12 +160,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{
-                width: "19rem",
-                height: "19rem",
-                objectFit: "cover",
-                overflow: "hidden",
-              }}
+              style={{ width: "19.8rem", height: "19.8rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={blog}
             />
@@ -195,12 +190,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{
-                width: "19rem",
-                height: "19rem",
-                objectFit: "cover",
-                overflow: "hidden",
-              }}
+              style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+              marginRight: "auto"}}
               variant="top"
               src={authors}
             />
@@ -227,12 +218,8 @@ const Home = () => {
         <div className="card">
           <Card style={{ width: "20rem" }}>
             <Card.Img
-              style={{
-                width: "19rem",
-                height: "19rem",
-                objectFit: "cover",
-                overflow: "hidden",
-              }}
+            style={{ width: "19.9rem", height: "19.9rem", objectFit: "cover", overflow: "hidden", marginLeft: "auto",
+            marginRight: "auto"}}
               variant="top"
               src={partners}
               alt="partners"
