@@ -11,7 +11,7 @@ const [recipesData, setRecipesData] = useState([]);
 
 useEffect(() => {
 
-    client.getEntries({content_type:'recipe'})
+  fetch('http://localhost:8000/recipes')
     .then(response => setRecipesData(response.items)
     .catch(error => console.log('Error: ', error))
     );

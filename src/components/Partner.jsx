@@ -9,10 +9,12 @@ const [partnerData, setPartnerData] = useState([]);
 
 useEffect(() => {
 
-
-  client.getEntries({content_type:'partner'}).then(response => setPartnerData(response.items)).catch(error => console.log('Error: ', error));
+  fetch('http://localhost:8000/partners')
+  .then(response => setPartnerData(response.items)).catch(error => console.log('Error: ', error));
 
   }, [])
+
+
 
   let navigate =useNavigate();
 function goBack() {
@@ -23,7 +25,7 @@ function goBack() {
 <>
     <div className="partnerWrapper">
       {
-      partnerData.length &&
+      partnerData &&
         partnerData.map((item) => 
         <>
           <div className="partnerCard">

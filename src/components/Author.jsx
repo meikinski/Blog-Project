@@ -7,17 +7,13 @@ export default function Author() {
   const [author, setAuthor] = useState([]);
   // console.log(author);
   useEffect(() => {
-    const getAuthors = async () => {
-      try {
-        const resp = await client.getEntries({ content_type: "authors" });
-        console.log(resp);
-        setAuthor(resp.items);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAuthors();
-  }, []);
+
+        fetch('http://localhost:8000/authors')
+        .then(resp => setAuthor(resp.items)) 
+        .catch(error => console.log('Error: ', error))
+        // console.log(author)
+
+    }, []);
 
   let navigate = useNavigate();
   function goBack() {
