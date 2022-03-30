@@ -9,7 +9,8 @@ export default function Author() {
   useEffect(() => {
 
         fetch('http://localhost:8000/authors')
-        .then(resp => setAuthor(resp.items)) 
+        .then(response => response.json())
+        .then(data => setAuthor(data)
         .catch(error => console.log('Error: ', error))
         // console.log(author)
 

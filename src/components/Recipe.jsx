@@ -12,12 +12,13 @@ const [recipesData, setRecipesData] = useState([]);
 useEffect(() => {
 
   fetch('http://localhost:8000/recipes')
-    .then(response => setRecipesData(response.items)
+  .then(response => response.json())
+    .then(data => setRecipesData(data)
     .catch(error => console.log('Error: ', error))
     );
      },[]);
 
-     console.log(recipesData);
+     console.log('Data', recipesData);
 
 
 let navigate =useNavigate();
