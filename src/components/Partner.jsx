@@ -9,7 +9,8 @@ useEffect(() => {
 
   fetch('http://localhost:8000/partners')
   .then(response => response.json())
-  .then(data => setPartnerData(data)).catch(error => console.log('Error: ', error));
+  .then(data => setPartnerData(data))
+  .catch(error => console.log('Error: ', error));
   }, [])
 
     console.log(partnerData)

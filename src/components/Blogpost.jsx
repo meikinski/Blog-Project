@@ -15,23 +15,34 @@ function Blogpost() {
         console.log(isExpanded);
     }
 
-    useEffect(() => {
-      let isLoading = true;
 
-      const fetchData = async () => {
-        const response = await fetch('http://localhost:8000/blog');
-        const json = await response.json();
-        if(isLoading){
-          setPosts(response);
-          setMounted(true);
-        }
-      };
-      fetchData().catch(err => console.log(err));
-      return () => (isLoading = false);
-    }, []);
+    useEffect(() => {
+      fetch('http://localhost:8000/blog')
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(error => console.log('Error: ', error))}, []);
+
+
+    // useEffect(() => {
+    //   let isLoading = true;
+
+    //   const fetchData = async () => {
+    //     const response = await fetch('http://localhost:8000/blog');
+    //     const json = await response.json();
+    //     if(isLoading){
+    //       setPosts(json);
+    //       setMounted(true);
+    //     }
+    //   };
+    //   fetchData().catch(err => console.log(err));
+    //   return () => (isLoading = false);
+    // }, []);
+
+
+
+    posts && console.log(posts);
 
     let navigate = useNavigate();
-
     function goBack() {
     navigate(-1);
     }
