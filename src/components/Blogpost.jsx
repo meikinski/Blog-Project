@@ -23,23 +23,6 @@ function Blogpost() {
       .catch(error => console.log('Error: ', error))}, []);
 
 
-    // useEffect(() => {
-    //   let isLoading = true;
-
-    //   const fetchData = async () => {
-    //     const response = await fetch('http://localhost:8000/blog');
-    //     const json = await response.json();
-    //     if(isLoading){
-    //       setPosts(json);
-    //       setMounted(true);
-    //     }
-    //   };
-    //   fetchData().catch(err => console.log(err));
-    //   return () => (isLoading = false);
-    // }, []);
-
-
-
     posts && console.log(posts);
 
     let navigate = useNavigate();
@@ -59,7 +42,7 @@ function Blogpost() {
               <div className="blogPictureContainer">
                 <img
                   className="blogPicture"
-                  src={items.fields.picture.fields.file.url}
+                  src={items.Picture}
                   alt="blogspicture"
                 />
               </div>
