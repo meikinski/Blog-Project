@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom'
-import {client} from '../client.js';
+//import {client} from '../client.js';
 import './recipe.css'
 import RecipeCard from './RecipeCard.jsx';
 
@@ -26,18 +26,18 @@ function goBack() {
   navigate(-1);
 }
 
-//1. check if some recipes include a property "tag" with the name "veggie"
+/* //1. check if some recipes include a property "tag" with the name "veggie"
 const handleVeggie = () => {
 //recipes state manipulieren und nur veggie Rezepte anzeigen
-client.getEntries({content_type:'recipe'})
+fetch({content_type:'recipe'})
     .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Veggie")))
     .catch(error => console.log('Error: ', error))
     );
 /*let veggieRecipes = recipesData && recipesData.filter(el => el.fields.tags?.includes("Veggie"));
 console.log(veggieRecipes)
 setRecipesData(veggieRecipes);*/
-}
 
+/* 
 const handleMeat = () => {
   client.getEntries({content_type:'recipe'})
       .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Meat")))
@@ -57,7 +57,7 @@ const handleMeat = () => {
     .then(response => setRecipesData(response.items)
     .catch(error => console.log('Error: ', error))
     );
-    }
+    } */
 
 return (
   <>
@@ -65,7 +65,7 @@ return (
       <h2>RECIPES</h2>
     </div>
     <div className="tagButtons">
- <button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton" onClick={handleMeat}>meat</button> <button className="tagButton" onClick={handlePasta}>pasta</button>
+{/*<button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton" onClick={handleMeat}>meat</button> <button className="tagButton" onClick={handlePasta}>pasta</button>*/}
     </div>
     <div className="d-flex flex-wrap justify-content-around">
       {recipesData && recipesData.map((recipes) => (
@@ -83,7 +83,7 @@ return (
       ))}
     </div>
     <div className="tagButtons">
-    <button onClick={handleBackToAll}>all recipes</button>
+    {/*<button onClick={handleBackToAll}>all recipes</button>*/}
     </div>
     <div className="d-flex justify-content-center mb-5">
     <button onClick={goBack}>Go back</button>
