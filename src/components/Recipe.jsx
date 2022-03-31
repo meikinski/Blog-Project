@@ -25,7 +25,7 @@ let navigate =useNavigate();
 function goBack() {
   navigate(-1);
 }
-
+/*
 //1. check if some recipes include a property "tag" with the name "veggie"
 const handleVeggie = () => {
 //recipes state manipulieren und nur veggie Rezepte anzeigen
@@ -35,10 +35,10 @@ client.getEntries({content_type:'recipe'})
     );
 /*let veggieRecipes = recipesData && recipesData.filter(el => el.fields.tags?.includes("Veggie"));
 console.log(veggieRecipes)
-setRecipesData(veggieRecipes);*/
+setRecipesData(veggieRecipes);
 }
 
-const handleMeat = () => {
+/*const handleMeat = () => {
   client.getEntries({content_type:'recipe'})
       .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Meat")))
       .catch(error => console.log('Error: ', error))
@@ -57,7 +57,7 @@ const handleMeat = () => {
     .then(response => setRecipesData(response.items)
     .catch(error => console.log('Error: ', error))
     );
-    }
+    }*/
 
 return (
   <>
@@ -65,25 +65,26 @@ return (
       <h2>RECIPES</h2>
     </div>
     <div className="tagButtons">
- <button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton" onClick={handleMeat}>meat</button> <button className="tagButton" onClick={handlePasta}>pasta</button>
+ <button className="tagButton" >veggie</button>  <button className="tagButton">meat</button> <button className="tagButton">pasta</button>
     </div>
     <div className="d-flex flex-wrap justify-content-around">
       {recipesData && recipesData.map((recipes) => (
         <RecipeCard
-          title={recipes.fields.title}
-          description={recipes.fields.description}
-          tags={recipes.fields.description}
-          rating={recipes.fields.rating}
-          author={recipes.fields.author}
-          image={recipes.fields.picture.fields.file.url}
-          ingredients={recipes.fields.ingredients}
-          preperation={recipes.fields.prep}
-          recipeTags={recipes.fields.tags}
+          key = {recipes.id}
+          title={recipes.Title}
+          description={recipes.Description}
+          tags={recipes.Description}
+          rating={recipes.Rating}
+          author={recipes.Author}
+          image={recipes.Picture}
+          ingredients={recipes.Ingrediients}
+          preperation={recipes.Prep}
+          recipeTags={recipes.Tags}
         />
       ))}
     </div>
     <div className="tagButtons">
-    <button onClick={handleBackToAll}>all recipes</button>
+    <button >all recipes</button>
     </div>
     <div className="d-flex justify-content-center mb-5">
     <button onClick={goBack}>Go back</button>
