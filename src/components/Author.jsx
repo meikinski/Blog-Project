@@ -1,28 +1,20 @@
 import React, { useState, useEffect } from "react";
 import {useNavigate} from 'react-router-dom';
-import { client } from "../client.js";
 import AuthorCards from "./AuthorCards";
 
 export default function Author() {
   const [author, setAuthor] = useState([]);
-  // console.log(author);
+
   useEffect(() => {
-    const getAuthors = async () => {
-      try {
-        const resp = await client.getEntries({ content_type: "authors" });
-        console.log(resp);
-        setAuthor(resp.items);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getAuthors();
-  }, []);
+        fetch('http://localhost:8000/authors')
+        .then(response => response.json())
+        .then(data => setAuthor(data))
+        .catch(error => console.log('Error: ', error))}, []);
+
 
   let navigate = useNavigate();
   function goBack() {
-    navigate(-1);
-  }
+    navigate(-1)}
 
   return (
     <>

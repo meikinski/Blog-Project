@@ -8,23 +8,24 @@ import { useNavigate } from 'react-router-dom';
 function Blogpost() {
 
     const [posts, setPosts] = useState([]);
-    //const [showMore, setShowMore] = useState(false);
-    console.log(posts);
+    const [mounted, setMounted] = useState(false);
+
 
     function executeOnClick(isExpanded) {
         console.log(isExpanded);
     }
 
+
     useEffect(() => {
+      fetch('http://localhost:8000/blog')
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(error => console.log('Error: ', error))}, []);
 
-        client.getEntries({ content_type: 'blogPosts' })
-            .then(response => setPosts(response.items)
 
-            );
-    }, []);
+    posts && console.log(posts);
 
     let navigate = useNavigate();
-
     function goBack() {
     navigate(-1);
     }
@@ -35,13 +36,13 @@ function Blogpost() {
           <h2>Our latest Blog Posts</h2>
         </div>
 
-        {posts.map((items) => {
+        {posts && posts.map((items) => {
           return (
             <div key={crypto.randomUUID()} className="blogPost">
               <div className="blogPictureContainer">
                 <img
                   className="blogPicture"
-                  src={items.fields.picture.fields.file.url}
+                  src={items.Picture}
                   alt="blogspicture"
                 />
               </div>
