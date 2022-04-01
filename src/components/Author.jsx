@@ -21,13 +21,13 @@ export default function Author() {
       <div className="authorWrapper">
         {author.map((person) => (
           <AuthorCards
-            key={person.sys.id}
-            id={person.sys.id}
-            title={person.fields.title}
-            name={person.fields.name}
-            picture={person.fields.picture.fields.file.url}
-            shortIntro={person.fields.shortIntro1}
-            socialMedia={person.fields.socialMedia}
+            key={person.id}
+            id={person.id}
+            title={person.Cooking_type}
+            name={person.Name}
+            picture={person.Image}
+            shortIntro={person.Intro}
+            socialMedia={person.Instagram_link}
           />
         ))}
       </div>
