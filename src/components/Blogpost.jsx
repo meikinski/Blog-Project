@@ -17,7 +17,7 @@ function Blogpost() {
 
 
     useEffect(() => {
-      fetch('http://localhost:8000/blog')
+      fetch('https://wbs-blog-project.herokuapp.com/blog')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => console.log('Error: ', error))}, []);

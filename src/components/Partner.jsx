@@ -7,7 +7,7 @@ const [partnerData, setPartnerData] = useState([]);
 
 useEffect(() => {
 
-  fetch('http://localhost:8000/partners')
+  fetch('https://wbs-blog-project.herokuapp.com/partners')
   .then(response => response.json())
   .then(data => setPartnerData(data))
   .catch(error => console.log('Error: ', error));

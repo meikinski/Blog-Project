@@ -11,7 +11,7 @@ const [recipesData, setRecipesData] = useState([]);
 
 useEffect(() => {
 
-  fetch('http://localhost:8000/recipes')
+  fetch('https://wbs-blog-project.herokuapp.com/recipes')
   .then(response => response.json())
     .then(data => setRecipesData(data)
     .catch(error => console.log('Error: ', error))
