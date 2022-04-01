@@ -44,13 +44,11 @@ function Blogpost() {
               </div>
               <h2 className="blogTitle">
                 <ReactMarkdown>
-                  {items.fields.blogTitle.content[0].content[0].value}
+                  {items.title}
                 </ReactMarkdown>
               </h2>
-              <div className="pullQuote">
-                <ReactMarkdown>
-                  {items.fields.pullQuote.content[0].content[0].value}
-                </ReactMarkdown>
+              <div className="blockquote">
+                <p>{items.guote}</p>
               </div>
               <ShowMoreText
                 /* Default options */
@@ -65,19 +63,19 @@ function Blogpost() {
                 truncatedEndingComponent={"... "}
               >
                 <div className="blogEntry">
-                  <ReactMarkdown>{items.fields.blogEntry}</ReactMarkdown>
+                  <ReactMarkdown>{items.blogtext}</ReactMarkdown>
                 </div>
               </ShowMoreText>
               <div className="authorsPictureContainer">
                 <img
                   className="authorsPicture"
-                  src={items.fields.authorsPicture.fields.file.url}
+                  src={items.authorspicture}
                   alt="authorspicture"
                 />
               </div>
               <div className="authorsName">
                 <ReactMarkdown>
-                  {items.fields.authorsName.content[0].content[0].value}
+                  {items.authorsname}
                 </ReactMarkdown>
               </div>
             </div>

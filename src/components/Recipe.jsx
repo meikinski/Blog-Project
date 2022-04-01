@@ -28,7 +28,7 @@ function goBack() {
 //1. check if some recipes include a property "tag" with the name "veggie"
 const handleVeggie = () => {
 //recipes state manipulieren und nur veggie Rezepte anzeigen
-client.getEntries({content_type:'recipe'})
+fetch({content_type:'recipe'})
     .then(response => setRecipesData(response.items.filter(el => el.fields.tags?.includes("Veggie")))
     .catch(error => console.log('Error: ', error))
     );
@@ -64,7 +64,11 @@ return (
       <h2>RECIPES</h2>
     </div>
     <div className="tagButtons">
+
+{/*<button className="tagButton" onClick={handleVeggie}>veggie</button>  <button className="tagButton" onClick={handleMeat}>meat</button> <button className="tagButton" onClick={handlePasta}>pasta</button>*/}
+
  <button className="tagButton" >veggie</button>  <button className="tagButton">meat</button> <button className="tagButton">pasta</button>
+
     </div>
     <div className="d-flex flex-wrap justify-content-around">
       {recipesData && recipesData.map((recipes) => (
@@ -83,7 +87,11 @@ return (
       ))}
     </div>
     <div className="tagButtons">
+
+    {/*<button onClick={handleBackToAll}>all recipes</button>*/}
+
     <button >all recipes</button>
+
     </div>
     <div className="d-flex justify-content-center mb-5">
     <button onClick={goBack}>Go back</button>
