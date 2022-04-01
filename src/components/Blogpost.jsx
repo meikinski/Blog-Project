@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {client} from "../client";
 import ReactMarkdown from 'react-markdown';
 import ShowMoreText from "react-show-more-text";
 import "../Blogpost.css";
@@ -8,16 +7,13 @@ import { useNavigate } from 'react-router-dom';
 function Blogpost() {
 
     const [posts, setPosts] = useState([]);
-    const [mounted, setMounted] = useState(false);
-
 
     function executeOnClick(isExpanded) {
         console.log(isExpanded);
     }
 
-
     useEffect(() => {
-      fetch('http://localhost:8000/blog')
+      fetch('https://wbs-blog-project.herokuapp.com/blog')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => console.log('Error: ', error))}, []);
