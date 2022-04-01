@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {client} from "../client";
 import ReactMarkdown from 'react-markdown';
 import ShowMoreText from "react-show-more-text";
 import "../Blogpost.css";
@@ -8,36 +7,16 @@ import { useNavigate } from 'react-router-dom';
 function Blogpost() {
 
     const [posts, setPosts] = useState([]);
-    const [mounted, setMounted] = useState(false);
-
 
     function executeOnClick(isExpanded) {
         console.log(isExpanded);
     }
 
-
     useEffect(() => {
-      fetch('http://localhost:8000/blog')
+      fetch('https://wbs-blog-project.herokuapp.com/blog')
       .then(response => response.json())
       .then(data => setPosts(data))
       .catch(error => console.log('Error: ', error))}, []);
-
-
-    // useEffect(() => {
-    //   let isLoading = true;
-
-    //   const fetchData = async () => {
-    //     const response = await fetch('http://localhost:8000/blog');
-    //     const json = await response.json();
-    //     if(isLoading){
-    //       setPosts(json);
-    //       setMounted(true);
-    //     }
-    //   };
-    //   fetchData().catch(err => console.log(err));
-    //   return () => (isLoading = false);
-    // }, []);
-
 
 
     posts && console.log(posts);
@@ -59,7 +38,7 @@ function Blogpost() {
               <div className="blogPictureContainer">
                 <img
                   className="blogPicture"
-                  src={items.fields.picture.fields.file.url}
+                  src={items.Picture}
                   alt="blogspicture"
                 />
               </div>

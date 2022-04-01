@@ -7,7 +7,7 @@ const [partnerData, setPartnerData] = useState([]);
 
 useEffect(() => {
 
-  fetch('http://localhost:8000/partners')
+  fetch('https://wbs-blog-project.herokuapp.com/partners')
   .then(response => response.json())
   .then(data => setPartnerData(data))
   .catch(error => console.log('Error: ', error));
@@ -33,7 +33,7 @@ function goBack() {
             <img className="partnerImage" src={item.picture} alt="test"/>
             <div class="" className="partnerDescription"> 
               <p className="partnerText my-4"  >{item.description}</p>
-              <a className="partnerText" href='https://</div></div>www.google.de'>More information</a>
+              <a className="partnerText" href={item.url}>More information</a>
             </div>
           </div>
         </>

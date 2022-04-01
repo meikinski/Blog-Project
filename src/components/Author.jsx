@@ -6,7 +6,7 @@ export default function Author() {
   const [author, setAuthor] = useState([]);
 
   useEffect(() => {
-        fetch('http://localhost:8000/authors')
+        fetch('https://wbs-blog-project.herokuapp.com/authors')
         .then(response => response.json())
         .then(data => setAuthor(data))
         .catch(error => console.log('Error: ', error))}, []);
