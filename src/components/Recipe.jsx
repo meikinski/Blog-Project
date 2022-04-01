@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom'
-import {client} from '../client.js';
 import './recipe.css'
 import RecipeCard from './RecipeCard.jsx';
 

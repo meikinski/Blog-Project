@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import {client} from "../client";
 import ReactMarkdown from 'react-markdown';
 import ShowMoreText from "react-show-more-text";
 import "../Blogpost.css";
@@ -8,13 +7,10 @@ import { useNavigate } from 'react-router-dom';
 function Blogpost() {
 
     const [posts, setPosts] = useState([]);
-    const [mounted, setMounted] = useState(false);
-
 
     function executeOnClick(isExpanded) {
         console.log(isExpanded);
     }
-
 
     useEffect(() => {
       fetch('https://wbs-blog-project.herokuapp.com/blog')
